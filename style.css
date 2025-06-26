@@ -1,184 +1,489 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Juhuma - Free Games & Entertainment</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="main.css">
-  <style>
-    /* Add to main.css or update as needed */
-    .big-game-frame {
-      width: 90vw !important;
-      max-width: 1400px !important;
-      height: 80vh !important;
-      min-height: 500px !important;
-      border-radius: 24px;
-      margin: 2rem auto 1.5rem auto;
-      box-shadow: 0 8px 32px #ffb80055, 0 2px 8px #ff7b5455;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
 
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      align-items: center;
-      margin: 2rem auto;
-      max-width: 700px;
-    }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
 
-    .faq-item {
-      background: linear-gradient(90deg, #ffe0e9 0%, #fffbe6 100%);
-      border-radius: 14px;
-      padding: 1.2rem 2rem;
-      box-shadow: 0 2px 8px #ffb80022;
-      color: #232946;
-      font-size: 1.15rem;
-      width: 100%;
-      text-align: left;
-      border-left: 7px solid #ffb800;
-    }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 25%, #a1c4fd 60%, #c2e9fb 100%);
+  color: #ff7b54; /* Orange text for body */
+  font-family: 'Inter', Arial, sans-serif;
+  overflow-x: hidden;
+  padding-bottom: 70px; /* Add space so content isn't hidden behind footer */
+  font-size: 1.18rem;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 8px #fff8, 0 1px 0 #fff8;
+}
 
-    .faq-item strong {
-      color: #ffb800;
-      font-size: 1.13rem;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
+header {
+  background: linear-gradient(90deg, #ffb800 0%, #ff7b54 100%);
+  padding: 0 0 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 2px 16px #0002;
+  border-bottom: 2px solid #fff3;
+  position: relative;
+}
 
-    .faq-item span {
-      color: #ff7b54;
-      font-weight: 600;
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#game">Lucky Mines</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <h1 class="main-title">Juhuma</h1>
-    <p class="subtitle">Just Joy and Good Times!</p>
-  </header>
-  <main>
-    <!-- Welcome Section -->
-    <section class="welcome-section" id="welcome">
-      <h2>Welcome!</h2>
-      <p>
-        We're thrilled to have you at Juhuma! Here, fun never folds and playtime is always on the table. Explore a world of exciting, free games—safe, friendly, and 100% free. No cash, no pressure, just good vibes and great games for everyone.
-      </p>
-    </section>
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="hero-content">
-        <h2>Welcome to Juhuma</h2>
-        <p>
-          <span class="hero-highlight">Welcome to Juhuma!</span><br>
-          Step into a world where fun never folds and playtime is always on the table! Juhuma is your go-to spot for exciting free games—safe, friendly, and 100% free. No cash, no pressure, just good vibes and great games.
-        </p>
-        <p>
-          Dive into a world of exciting entertainment. Juhuma offers a safe, fun, and completely free way to enjoy casino-style play. No real money, no prizes, just pure joy!
-        </p>
-        <a href="#game" class="start-btn">🎉 Start Playing</a>
-      </div>
-      <div class="hero-bg"></div>
-    </section>
-    <!-- Game Section -->
-    <section class="game-section" id="game">
-      <h3 class="game-title">Featured Game: <span>Lucky Mines</span></h3>
-      <h4 class="game-subtitle">💎 Welcome to Lucky Mines Adventure</h4>
-      <p>
-        Step into a dazzling underground world where glowing gems, secret tunnels, and cheerful dwarves await! Lucky Mines Adventure transforms traditional mining into a sparkling, risk-free thrill ride of discovery and delight. Grab your pickaxe and lantern—it’s time to dig into fun!
-      </p>
-      <p>
-        This isn’t just a journey underground—it’s a whimsical plunge into a realm where every spin uncovers glowing surprises, pickaxes strike gold, and laughter echoes through gem-studded caverns.
-      </p>
-      <h4>✨ Key Features of the Glittering Deep</h4>
-      <ul class="game-features">
-        <li><strong>Gemstone Symbols:</strong> Unearth radiant sapphires, rubies, emeralds, and golden nuggets—all animated with dazzling shimmer to make every spin a visual treat.</li>
-        <li><strong>Cheerful Dwarf Companions:</strong> Meet a merry crew of mining dwarves, each with unique tools and personalities, who cheer you on with hearty laughter and playful charm.</li>
-        <li><strong>Pickaxe Wilds:</strong> Watch wild symbols smash through the rocks with a swing of the pickaxe, adding a burst of excitement to your spins.</li>
-        <li><strong>Exploding Reels:</strong> Clusters of matching gems burst in brilliant explosions, clearing space for new ones to fall and create cascading wins.</li>
-        <li><strong>Bonus Cart Ride:</strong> Hop into the minecart and roll deep into hidden chambers packed with glowing treasures and bonus rewards.</li>
-      </ul>
-      <h4>🪨 The Story Behind Lucky Mines Adventure</h4>
-      <p>
-        Beneath the earth lies a secret world of twinkling lights and joyful echoes—the home of the Lucky Miners. These jolly gem-seekers have dedicated their lives to uncovering magical stones buried deep within the caverns.
-      </p>
-      <p>
-        You join them on their newest expedition, entering the mine through an old wooden shaft. With every spin, you journey deeper into enchanted tunnels, unlocking mysterious doors, glittering crystals, and ancient secrets. The deeper you dig, the more wonders you discover—and the louder the dwarves cheer you on!
-      </p>
-      <p>
-        Each moment sparkles with vibrant animations, joyful sound effects, and unexpected surprises designed to keep the fun going.
-      </p>
-      <h4>🚂 Start Your Adventure Today!</h4>
-      <p>
-        Ready to don your helmet, grab your lantern, and venture into a world of glowing gems and endless fun? Lucky Mines Adventure invites you to explore its charming depths, meet delightful characters, and uncover sparkling treasures—all in a safe, risk-free experience.
-      </p>
-      <p>
-        Jump aboard the minecart—your glittering adventure begins now!
-      </p>
-      <iframe
-        class="game-frame big-game-frame"
-        src="https://api.inout.games/api/launch?gameMode=lucky-mines&authToken=5b4ffceb-568d-8f10-11f0-2bb6afac990c&operatorId=ee2013ed-e1f0-4d6e-97d2-f36619e2eb52&currency=USD&lang=en"
-        title="Lucky Mines"
-        allowfullscreen
-      ></iframe>
-      <div class="notice">
-        <strong>Notice:</strong> All games are for entertainment only. No real money gambling, no prizes, and no purchases. Ages 18+.
-      </div>
-    </section>
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <strong>Is Juhuma really free?</strong>
-          <span>Yes! All games are 100% free to play. No real money is involved at any stage.</span>
-        </div>
-        <div class="faq-item">
-          <strong>Can I win real money or prizes?</strong>
-          <span>No. Juhuma is for entertainment only. There are no cash prizes or real money winnings.</span>
-        </div>
-        <div class="faq-item">
-          <strong>Is there an age restriction?</strong>
-          <span>Yes. You must be 18 or older to play on Juhuma.</span>
-        </div>
-        <div class="faq-item">
-          <strong>Do I need to register?</strong>
-          <span>No registration or download required. Just visit and play instantly!</span>
-        </div>
-      </div>
-    </section>
-    <section class="contact" id="contact">
-      <!-- Contact content here -->
-    </section>
-    <section class="disclaimer" style="flex-direction: column; align-items: center; gap: 1.5rem; justify-content: center;">
-      <h2>Disclaimer</h2>
-      <a href="https://www.begambleaware.org/" target="_blank" rel="noopener">
-        <img src="./begambleaware-white.png" alt="BeGambleAware" style="width:120px; height:auto; border-radius:16px; box-shadow:0 2px 8px #ffb80055;">
-      </a>
-      <div style="text-align:center; max-width: 700px;">
-        <p>
-          Juhuma is intended solely for entertainment purposes. All games on this site are free to play and do not involve any form of real money gambling, betting, or wagering. No actual currency, prizes, or rewards of monetary value can be won or exchanged. Participation is restricted to individuals aged 18 and above. Juhuma does not require or accept any deposits, and no purchases are necessary or possible.
-        </p>
-        <p>
-          The outcomes of all games are determined by random number generators and are not influenced by player actions or external factors. Any resemblance to real casino experiences is purely for entertainment and does not reflect actual gambling. We encourage responsible play and remind users that this platform is not a substitute for real gambling or gaming for money.
-        </p>
-        <p>
-          By using Juhuma, you acknowledge and agree that your activity is for recreational purposes only. If you have concerns about your gaming habits or need support, please seek help from a professional organization.
-        </p>
-      </div>
-    </section>
-  </main>
-  <footer>
-    &copy; 2025 Juhuma. Fun and entertainment only.
-  </footer>
-</body>
-</html>
+header h1 {
+  margin: 0;
+  font-size: 3.2rem;
+  letter-spacing: -1.5px;
+  color: #232946;
+  font-weight: 900;
+  text-shadow: 0 2px 12px #fff7, 0 1px 0 #ffb800;
+}
+
+header .subtitle {
+  margin: 0.75rem 0 0 0;
+  color: #ff7b54;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 8px #fff7;
+}
+
+.main-nav {
+  width: 100vw;
+  background: #232946;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 8px #0002;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  color: #ffb800;
+  font-family: 'Baloo 2', cursive, Arial, sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: #ff7b54;
+  text-decoration: underline;
+}
+
+main {
+  flex: 1 1 auto;
+  width: 100vw;
+  max-width: none;
+  min-height: 0;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: transparent;
+}
+
+section {
+  width: 100vw;           /* Fill the viewport width */
+  max-width: 100vw;       /* Remove max-width constraint */
+  margin: 0;              /* Remove side margins */
+  padding: 2.5rem 0;      /* Remove side padding, keep vertical padding */
+  background: linear-gradient(120deg, #fffbe6 60%, #ffe0e9 100%);
+  border-radius: 0;       /* Remove border radius for edge-to-edge */
+  box-shadow: none;       /* Remove box shadow for flush look */
+  border: none;           /* Remove border */
+}
+
+.hero, .features, .faq, .contact, .about, .disclaimer {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 2rem 0;      /* Only vertical padding, no side padding */
+  border-radius: 0;
+  background: #232946;
+  box-shadow: none;
+}
+
+.hero h2, .features h2, .faq h2, .contact h2, .about h2, .disclaimer h2 {
+  color: #ffb800; /* Brighter orange for headings */
+  font-size: 2.4rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 12px #fff9, 0 1px 0 #ffb800;
+  font-family: 'Baloo 2', cursive, Arial, sans-serif;
+}
+
+.hero-content {
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.07);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 32px #ffb80033, 0 2px 8px #ff7b5433;
+  border: 2px solid #ffb80033;
+}
+
+.hero-content h2 {
+  color: #ffb800;
+  font-size: 2.7rem;
+  font-weight: 900;
+  margin-bottom: 1.2rem;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 12px #fff9, 0 1px 0 #ffb800;
+  font-family: 'Baloo 2', cursive, Arial, sans-serif;
+}
+
+.hero-content p {
+  color: #ff7b54;
+  font-size: 1.3rem;
+  line-height: 1.85;
+  font-family: 'Inter', Arial, sans-serif;
+  text-shadow: 0 1px 8px #fff7;
+}
+
+.hero-highlight {
+  font-size: 1.4rem;
+  color: #ffb800;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 60% 40%, #ffb80033 0%, #fffbe600 80%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.start-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffb800 0%, #ff7b54 100%);
+  color: #232946;
+  font-weight: 800;
+  font-size: 1.4rem;
+  padding: 1.1rem 2.7rem;
+  border-radius: 2.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 16px #ffb80033;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  margin-top: 2rem;
+  border: none;
+  outline: none;
+  letter-spacing: 1px;
+  font-family: 'Baloo 2', cursive, Arial, sans-serif;
+}
+
+.start-btn:hover, .start-btn:focus {
+  background: linear-gradient(90deg, #ff7b54 0%, #ffb800 100%);
+  color: #fffbe6;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 32px #ffb80055;
+}
+
+.game-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5rem 0;
+  text-align: center;
+  background: linear-gradient(120deg, #fffbe6 60%, #ffe0e9 100%);
+  border-radius: 32px;
+  box-shadow: 0 8px 32px #ffb80033, 0 2px 8px #ff7b5433;
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.big-game-frame,
+.game-frame {
+  width: 98vw !important;
+  max-width: 1600px !important;
+  height: 80vh !important;
+  min-height: 500px !important;
+  border-radius: 36px;
+  margin: 2.5rem auto 2rem auto;
+  box-shadow: 0 16px 64px #ffb800cc, 0 4px 24px #ff7b54cc;
+  border: 6px solid #ffb800;
+  background: #fff;
+  display: block;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.big-game-frame:focus,
+.big-game-frame:hover,
+.game-frame:focus,
+.game-frame:hover {
+  box-shadow: 0 24px 96px #ffb800ee, 0 8px 32px #ff7b54ee;
+  border-color: #ff7b54;
+  outline: none;
+}
+
+.game-title {
+  margin-bottom: 1.2rem;
+  color: #ffb800;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px #fff9, 0 1px 0 #ffb800;
+  font-family: 'Baloo 2', cursive, Arial, sans-serif;
+}
+
+.game-title span {
+  color: #ff7b54;
+  font-weight: 900;
+}
+
+.game-subtitle {
+  color: #ffb800;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-family: 'Baloo 2', cursive, Arial, sans-serif;
+}
+
+.game-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 2rem auto;
+  display: inline-block;
+  text-align: left;
+}
+
+.game-features li {
+  background: linear-gradient(90deg, #ffe0e9 0%, #fffbe6 100%);
+  margin: 0.7rem 0;
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  color: #232946;
+  border-left: 7px solid #ffb800;
+  font-size: 1.12rem;
+  font-weight: 600;
+  transition: background 0.2s, border-left 0.2s;
+  box-shadow: 0 2px 8px #ffb80022;
+}
+
+.game-features li:hover {
+  background: linear-gradient(90deg, #fffbe6 0%, #ffe0e9 100%);
+  border-left: 7px solid #ff7b54;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #ffe0e9 0%, #fffbe6 100%);
+  border-radius: 32px;
+  box-shadow: 0 8px 32px #ffb80033, 0 2px 8px #ff7b5433;
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.faq h2 {
+  color: #ffb800;
+  font-size: 2.2rem;
+  font-family: 'Baloo 2', cursive, Arial, sans-serif;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 12px #fff9, 0 1px 0 #ffb800;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+}
+
+.faq-item {
+  background: linear-gradient(90deg, #fffbe6 0%, #ffe0e9 100%);
+  border-radius: 18px;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 2px 8px #ffb80022;
+  color: #232946;
+  font-size: 1.15rem;
+  width: 100%;
+  text-align: left;
+  border-left: 7px solid #ffb800;
+}
+
+.faq-item strong {
+  color: #ffb800;
+  font-size: 1.13rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.faq-item span {
+  color: #ff7b54;
+  font-weight: 600;
+  display: block;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  color: #ff7b54;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+footer {
+  width: 100vw;
+  color: #ffb800; /* Brighter orange for footer text */
+  font-size: 1.15rem;
+  text-align: center;
+  background: linear-gradient(90deg, #ffb800 0%, #ff7b54 100%);
+  padding: 1.5rem 0 1rem 0;
+  margin: 0;
+  border-top: 2px solid #fff3;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px #ffb80099, 0 1px 0 #ff7b54;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  font-family: 'Baloo 2', cursive, Arial, sans-serif;
+}
+
+.about {
+  background: linear-gradient(120deg, #ffe0e9 60%, #fffbe6 100%);
+  border: 2px solid #ff7b5433;
+}
+
+.disclaimer {
+  background: linear-gradient(90deg, #ff7b54 0%, #ffb800 100%);
+  color: #232946;
+  border-radius: 18px;
+  padding: 2rem 2rem;
+  margin: 2.5rem auto;
+  font-size: 1.13rem;
+  font-weight: 700;
+  box-shadow: 0 2px 12px #ffb80033;
+  border: 2px solid #fff3;
+}
+
+body, main, section, .disclaimer, .features, .faq, .contact, .about, .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* For disclaimer with image and text side by side, keep children centered */
+.disclaimer {
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.disclaimer > div {
+  text-align: left;
+}
+
+.big-game-frame {
+  width: 90vw !important;
+  max-width: 1400px !important;
+  height: 80vh !important;
+  min-height: 500px !important;
+  border-radius: 24px;
+  margin: 2rem auto 1.5rem auto;
+  box-shadow: 0 8px 32px #ffb80055, 0 2px 8px #ff7b5455;
+}
+
+/* --- Make only the game iframe as big as possible and easy to play --- */
+.big-game-frame,
+.game-frame {
+  width: 98vw !important;
+  max-width: 1600px !important;
+  height: 80vh !important;
+  min-height: 500px !important;
+  border-radius: 36px;
+  margin: 2.5rem auto 2rem auto;
+  box-shadow: 0 16px 64px #ffb800cc, 0 4px 24px #ff7b54cc;
+  border: 6px solid #ffb800;
+  background: #fff;
+  display: block;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.big-game-frame:focus,
+.big-game-frame:hover,
+.game-frame:focus,
+.game-frame:hover {
+  box-shadow: 0 24px 96px #ffb800ee, 0 8px 32px #ff7b54ee;
+  border-color: #ff7b54;
+  outline: none;
+}
+
+@media (max-width: 900px) {
+  .hero-content, .game-section {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem;
+  }
+  .game-frame {
+    height: 38vw;
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1, .main-title { font-size: 2rem; }
+  .hero-content h2, .game-title { font-size: 1.3rem; }
+  .hero-content, .game-section { padding: 0.7rem 0.2rem; }
+  .game-frame { height: 40vw; min-height: 120px; }
+  .start-btn { font-size: 1rem; padding: 0.8rem 1.5rem; }
+}
+
+@media (max-width: 1200px) {
+  .big-game-frame,
+  .game-frame {
+    max-width: 99vw !important;
+    min-height: 350px !important;
+    height: 60vw !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .big-game-frame,
+  .game-frame {
+    min-height: 180px !important;
+    height: 45vw !important;
+    border-radius: 14px;
+    border-width: 2px;
+  }
+}
